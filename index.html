@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - To Do List</title>
+  <link rel="shortcut icon" href="OIP-removebg-preview (1).png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Background animasi -->
+  <div class="background-animation">
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+    <div class="floating-shape"></div>
+  </div>
+
+  <div class="container">
+    <!-- Header -->
+    <div class="app-header">
+      <h1 class="app-title">
+        <i class="fas fa-check-circle"></i>
+        <span>TaskFlow</span>
+      </h1>
+      <p class="app-subtitle">Kelola tugas Anda dengan gaya modern</p>
+    </div>
+
+    <!-- Card utama -->
+    <div class="glass-card">
+      <!-- Pencarian -->
+      <div class="search-section">
+        <div class="search-wrapper">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="search-input" placeholder="Cari tugas..." class="search-input">
+        </div>
+      </div>
+
+      <!-- Form tambah tugas -->
+      <form id="task-form" class="task-form">
+        <div class="input-group">
+          <input type="text" id="task-input" placeholder="Apa yang ingin Anda kerjakan?" class="task-input" required>
+          <button type="submit" class="add-btn">
+            <i class="fas fa-plus"></i>
+            <span>Tambah</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Statistik -->
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <i class="fas fa-list"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number" id="total-tasks">0</span>
+            <span class="stat-label">Total Tugas</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon completed">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="stat-info">
+            <span class="stat-number" id="completed-tasks">0</span>
+            <span class="stat-label">Selesai</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Daftar tugas -->
+      <div class="task-list-container">
+        <ul id="task-list" class="task-list"></ul>
+        <div id="empty-state" class="empty-state">
+          <i class="fas fa-clipboard-list"></i>
+          <p>Belum ada tugas. Tambahkan tugas pertama Anda!</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Dibuat dengan <i class="fas fa-heart"></i> oleh TaskFlow</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
